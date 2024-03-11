@@ -1,4 +1,9 @@
-# Welcome to Inventory Manager by Kohen Johnston, Lists Github, 2024-03-11
+#......................................................................
+#kohen johnston
+#Lists Github
+#2024-03--11
+#......................................................................
+
 
 # Developer's Inventory
 developer_inventory = ["Sword", "Bow", "Potion", "Shield"]

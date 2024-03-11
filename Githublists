@@ -1,0 +1,67 @@
+# Welcome to Inventory Manager by Kohen Johnston, Lists Github, 2024-03-11
+
+# Developer's Inventory
+developer_inventory = ["Sword", "Bow", "Potion", "Shield"]
+
+# Your Inventory
+your_inventory = []
+
+# Function to display inventory with indexing
+def display_inventory_with_index(inventory):
+    for index, item in enumerate(inventory):
+        print(f"{index + 1}. {item}")
+
+# Function to add an item to your inventory
+def add_item_to_inventory(item):
+    your_inventory.append(item)
+    print(f"{item} has been added to your inventory.")
+
+# Function to remove an item from your inventory
+def remove_item_from_inventory(item):
+    if item in your_inventory:
+        your_inventory.remove(item)
+        print(f"{item} has been removed from your inventory.")
+    else:
+        print(f"{item} is not found in your inventory.")
+
+# Function to display the length of your inventory
+def display_inventory_length():
+    print(f"Your inventory contains {len(your_inventory)} items.")
+
+# Function to display nested lists
+def display_nested_lists():
+    nested_lists = [["Apple", "Banana", "Orange"], ["Sword", "Bow", "Potion"]]
+    for nested_list in nested_lists:
+        print(", ".join(nested_list))
+
+# Main loop
+while True:
+    print("\nDeveloper's Inventory:")
+    print(developer_inventory)
+    print("\nYour Inventory:")
+    print(your_inventory)
+
+    print("\nOptions:")
+    print("1. Add an item")
+    print("2. Remove an item")
+    print("3. Display the length of your inventory")
+    print("4. Display nested lists")
+    print("5. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        item = input("Enter the item you want to add: ")
+        add_item_to_inventory(item)
+    elif choice == "2":
+        item = input("Tell me the item you want to get rid of: ")
+        remove_item_from_inventory(item)
+    elif choice == "3":
+        display_inventory_length()
+    elif choice == "4":
+        display_nested_lists()
+    elif choice == "5":
+        print("Exiting")
+        break
+    else:
+        print("Invalid. Please try again.")
